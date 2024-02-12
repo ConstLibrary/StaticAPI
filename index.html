@@ -1,1 +1,34 @@
-Homepage Of StaticAPI on ConstLibrary
+<script>
+    // General Idea For Now Lol
+</script>
+
+<noscript>
+    <h1>Enable JS For API Usage!</h1>
+</noscript>
+
+<script>
+onload(run());
+
+function run(){
+    // Variables
+    const searchParams = new URLSearchParams(window.location.search);
+    
+    // Conditionals
+    if (searchParams.has("load")){
+        const usage = searchParams.get("load");
+        if (usage == "alert"){
+            if (searchParams.has("string")){
+                const string = searchParams.get("string");
+                alert(string);
+            } else {
+                alert("String is not set.")
+            }
+        }
+    } else {
+        alert("cant find load param");
+    }
+    
+    // Script
+}
+
+</script>
